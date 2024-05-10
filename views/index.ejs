@@ -2,17 +2,21 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
+    <div class="title"><%= title %></div>
     <h2>Messages:</h2>
-    <div>
+    <div class="messageContainer">
       <% messageArray.map( message=> { %>
-      <p><%= message.text %></p>
-      <p><%= message.user %></p>
-      <p><%= message.added %></p>
-      <% }).join('') %>
+      <div class="message">
+        <p class="text"><%= message.text %></p>
+        <div>
+          <p class="user"><%= message.user %></p>
+          <p class="date"><%= message.added.toLocaleDateString() %></p>
+        </div>
+      </div>
+      <% }) %>
     </div>
     <a href="/new">Add new message</a>
   </body>
