@@ -6,22 +6,31 @@
   </head>
   <body>
     <h1 class="title"><%= title %></h1>
-    <a href="/">Go back</a>
+    <a href="/">Go home</a>
     <form method="POST" action="/new">
       <label>
-        <span>Message</span>
+        <span>Message:</span>
         <textarea
           name="messageText"
           rows="5"
           placeholder="your message"
           required
+          class="input"
         ></textarea>
       </label>
       <label>
-        <span>By</span>
-        <input type="text" name="messageUser" placeholder="user" required />
+        <span>By:</span>
+        <input
+          type="text"
+          name="messageUser"
+          placeholder="user"
+          class="input inputUser"
+          required
+        />
       </label>
-      <button type="submit" class="postMessage">Post message</button>
+      <button class="post" type="submit" class="postMessage">
+        Post message
+      </button>
     </form>
   </body>
 </html>

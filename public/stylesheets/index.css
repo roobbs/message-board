@@ -16,7 +16,8 @@ body {
   font-weight: 900;
 }
 
-a {
+a,
+.post {
   color: #00ffc3;
   background-color: cadetblue;
   font-weight: 900;
@@ -27,7 +28,8 @@ a {
   text-decoration: none;
   border: 1px solid transparent;
 }
-a:hover {
+a:hover,
+.post:hover {
   color: rgb(255, 255, 255);
   background-color: #00ba8f;
   border-color: white;
@@ -46,10 +48,10 @@ a:hover {
   gap: 1rem;
 }
 .message {
-  background-color: grey;
+  background-color: rgb(89, 89, 89);
   padding: 1rem;
   border-radius: 1rem;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   display: flex;
   flex-direction: column;
 }
@@ -57,11 +59,10 @@ a:hover {
   display: flex;
   justify-content: space-between;
   padding: 0rem 3rem;
-  /* background-color: black; */
 }
 .message:hover {
   background-color: rgb(153, 153, 153);
-  border-color: cadetblue;
+  border-color: #00ffc3;
 }
 
 .text {
@@ -75,6 +76,7 @@ a:hover {
   color: #00ffc3;
   font-size: 1.1rem;
   font-weight: 900;
+  font-style: italic;
 }
 .date {
   background-color: cadetblue;
@@ -82,4 +84,47 @@ a:hover {
   padding: 5px;
   border-radius: 5px;
   font-weight: 900;
+}
+
+form {
+  margin-top: 1.2rem;
+  /* height: 60vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  /* width: 50vw; */
+}
+label {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+}
+.input {
+  width: 40vw;
+  resize: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 1rem;
+  background-color: grey;
+  color: white;
+}
+.input::placeholder {
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+.inputUser {
+  text-align: center;
+}
+.post {
+  align-self: center;
+  font-weight: 600;
+}
+span {
+  align-self: flex-start;
+  padding: 10px;
+  font-size: 1.1rem;
 }
